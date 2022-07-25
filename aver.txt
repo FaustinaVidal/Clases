@@ -1,0 +1,58 @@
+14clases coder
+7 clases hoy
+- Semana 1
+	- Opcional: Introducción al Desarrollo Web (\/)
+	- 1. Prototipado y conceptos básicos de HTML (\/)
+	- Clase complementaria de Repaso de las clases dadas (\/)
+- Semana 2
+	- 2. Primeros pasos con HTML (\/)
+	-> entrega (\/)
+	- 3. Incluyendo CSS a nuestro proyecto
+	- After Class - Clase 2 y 3
+- Semana 3
+	- 4. CSS + Box Modeling
+	-> entrega ()
+	- 5. Flexbox
+	-> entrega ()
+	- Clase complementaria de Repaso 🤩
+- Semana 4
+	- 6. GRIDS
+	- 7. GRIDS V2
+	- After Class - Clase 6 y 7
+- Semana 5
+	- 8. Animaciones, transformaciones y transiciones
+	--> entrega
+	--> entrega
+	- 9. GIT
+- Semana 6
+After Git
+10. GITHUB
+Entrega
+11. Frameworks CSS + Bootstrap
+Entregar
+Entregar
+
+- Semana 7
+12. @Media + Pseudoclases
+Entregar
+13. SASS I
+Entregar
+
+- Semana 8
+
+14. SASS II
+15. Servidores y SEO para tu sitio
+Entregar
+
+- Semana 9
+16. Subida al servidor
+Entregar
+17. Conociendo a nuestro cliente
+Entregar
+
+
+- Semana 10
+
+
+18. Proyecto final
+ENTREGA DEL PROYECTO FINAL

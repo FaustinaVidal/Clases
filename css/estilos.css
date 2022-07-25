@@ -1,0 +1,644 @@
+/*------------------------Clase 3------------------------*/
+
+/*Debo sacarle las propiedades que tiene por defecto la web, para dps colocar lo deseado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* Selector de clase
+De esta manera, puedo colocar propiedades llamandola en una clase
+class="color-texto" */
+.color-texto {
+    color: violet;
+    font-size: 22px;
+}
+
+
+/* Selector de etiqueta
+De esta manera, me coloca las propiedades a todos los h1 de todas las paginas donde vincule el CSS (no necesito vincularlo yo en el h1)*/
+h1 {
+    color: blue;
+    font-size: 30px; 
+}
+
+/*Selector de id > Selector de clase > Selector de etiqueta*/
+
+
+/*me va a poner primero estas propiedades a todos los elementos p*/
+p {
+    color: green;
+}
+/*dps los p que esten dentro de section y div, les pone estas propiedades*/
+section div p {
+    color: orange; 
+    font-size: 16px;
+}
+
+/*Selector de id
+Esta manera es para casos UNICOS (usarlo solo 1vez).
+Se vincula en un id="titulo-destacado"
+Es mas adecuado en JavaScript*/
+#titulo-destacado {
+    color: brown;
+}
+
+/*Puedo usar !important, pero no es recomendable!! 
+por ej
+Si necesitamos usar el important mas de 5veces, tamos hacien2 todo mal*/
+
+h3 {
+    color: salmon;
+}
+
+h3 {
+    color: aqua !important;
+}
+
+/*Propiedades de texto*/
+.propiedades-texto {
+    color: yellow;
+    font-size: 23px; /*tamanio de la fuente*/
+    font-style: italic; /*cursiva de la fuente*/
+    font-weight: bold ; /*grosor de la fuente*/
+    font-family: Arial, Helvetica, sans-serif; /*tipografia de la fuente*/
+    text-align: justify; /*alineacion del texto*/
+    line-height: 1.5; /*Interlineado del texto*/
+    text-transform: capitalize; /*mayuscula -> uppercase, minuscula -> lowercase, primeras lestras en mayuscula-> capitalize*/
+    text-decoration: underline; /*delineado*/
+}
+
+/*Propiedades de fondo*/
+.propiedades-fondo {
+    background-color: aqua; /*color de fondo*/   
+}
+
+.imagen-fondo {
+    background-image: url(../img/foto4.jpg), url(../img/4YLVViDWyN.png); /*imagen de fondo*/  
+    background-repeat: no-repeat; 
+    /*si no quiero que se repita la imagen -> no-repeat*/  
+    /*
+    background-size: 200px 400px; tamanio de la imagen*/
+    background-size: 100px 100px,cover; /*imagen en tamanio completo*/
+    background-position: right center; /*Posicion de la imagen*/
+    background-attachment: fixed; /*la imagen queda fija, efecto parallax*/
+}
+
+/*Mas propiedades de css
+cssreference.io */
+
+/*Tipografias -> fonts.google.com
+Elijo la que quiera -> select this style -> voy a los cuadraditos -> Copio link en cada HTML donde voy a usar la tipografia y copio en mi clase la propiedad font-family*/
+
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+/*------------------------After Class 2 y 3------------------------*/
+.afterClass2y3 {
+    width: 100%;
+    min-height: 500px;
+    color: white;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.afterClass2y3__video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.afterClass2y3__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.afterClass2y3__texto { 
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+.afterClass2y3__titulo {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.afterClass2y3__boton {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.afterClass22y33 {
+    margin: 15px 0px 15px 0px;
+}
+
+.afterClass22y33__galeria {
+    display: flex;
+    gap: 15px;
+
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+
+    scroll-snap-type: x mandatory;
+
+    overflow-x: scroll; 
+    overflow-y: hidden; /*Esto es pa que se mueva en ese eje*/
+}   
+
+.afterClass22y33__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.afterClass22y33__enlace {
+    min-width: 800px;
+    height: 100vh;
+    display: block;
+}
+
+/*------------------------Clase 4------------------------*/
+/*carta__elemento--modificador -> noticia__titulo--mayusculas/ noticia--destacada*/
+
+/*Propiedades de modelo de caja
+-> width, height, padding, margin, border*/
+.card {
+    background-color: brown;
+    color: white; /*Esto me cambia el color del texto*/
+    width: 25%; /*eje x - Porcentaje, pixeles o viewport*/
+    height: 400px; /*eje y - Porcentaje, pixeles o viewport*/
+    padding: 25px 20px; /*Eje x/ eje y - Espaciado interno-> entre el contenido y el borde*/
+    margin: 10px 35px; /*Eje x/ eje y Espaciado externo-> entre el borde y los otros elementos de afuera*/
+    border: 5px solid rgb(0, 51, 3); /* -> borde verde, solido y de 5px */
+    border-radius: 10px;
+    /* Otra manera de poner bordes es
+    - border-top: 5px solid rgb(0, 255, 13); -> borde superior verde, solido y de 5px
+    - border-right: 5px solid rgb(0, 255, 13); -> borde derecho verde, solido y de 5px
+    - border-bottom: 5px solid rgb(0, 255, 13); -> borde inferior verde, solido y de 5px
+    - border-left: 5px solid rgb(0, 255, 13); -> borde izquierdo verde, solido y de 5px*/
+/*-------------------------------------*/
+    /*overflow: hidden; -> Corta al contenido que sobresalga
+    - Si quiero que me ponga barritas para bajar y subir en vez de que me corte el contenido, debo poner "scroll"
+    - Si quiero que me ponga barritas para bajar y subir solo en el eje que sea necesario, debo poner "auto"
+    - Tmbn puedo elegir a que eje darle overflow poniendo "overflow-x" o "overflow-y"*/
+/*-------------------------------------*/
+    display: inline-block; /*Me coloca las dos cajas en bloque, pero en linea (una alado de la otra)
+    - display: block; coloca todo en caja (queda una caja arriba de la otra)
+    - display: inline; coloca todo en linea 
+    - display: none; ocultar!
+    */
+/*-------------------------------------*/
+    box-shadow: 3px 3px 5px gray; /*sombra de la tarjeta -> eje x / eje y / difuminaciin*/
+/*-------------------------------------*/
+    position: relative; /*conectado con la position:absolute; de la oferta*/
+} 
+
+.card__imagen {
+    width: 100%;
+    max-height: 200px; /*maxima altura para la img*/
+    border-radius: 10px;
+    margin-bottom: 10px; /*si me quiero separar de otro objeto, esta es la propiedad adecuada*/
+}
+
+.card__titulo {
+    color: white;
+    font-size: 23px; /*tamanio de la fuente*/
+    font-weight: lighter ; /*grosor de la fuente*/
+    font-family: 'Pacifico', cursive;
+    text-align: center; /*alineacion del texto*/
+    text-transform: capitalize; /*mayuscula -> uppercase, minuscula -> lowercase, primeras lestras en mayuscula-> capitalize*/
+    text-decoration: underline; /*delineado*/
+    margin-bottom: 10px;
+}
+
+.card__parrafo {
+    color: white;
+    font-size: 14px; /*tamanio de la fuente*/
+    font-weight: lighter ; /*grosor de la fuente*/
+    text-align: justify; /*alineacion del texto*/
+}
+
+.card--ocultar{
+    display: none;
+}
+
+.card--oscuro {
+    background-color: black;
+    color: white;
+}
+
+/*--------------------------------------*/
+/* Si quiero poner elementos superpuestos
+position: relative; 
+position: absolute;
+position: fidex;
+position: sticky;
+*/ 
+.card__oferta{
+    background-color: white;
+    color: black;
+    padding: 2px 4px;
+    position: absolute; /*Esto va cuando quiero superponer este elemento,
+    debo poner adicionalmente las propiedades "top", "left", "right" o "bottom" para ubicar el elemento.
+    Necesito poner en el elemento padre position:relative; (en este caso el padre es la card)*/
+    top: 25px;
+    right: 20px;
+    border-radius: 5px;
+}
+
+/*--------------------------------------*/
+/*Dejar fijo el header!!*/
+header {
+    background-color: violet;
+    color: black;
+    position: fixed; /*Para dejarlo fijo, pero va a perder su tamanio xdefecto, necesito el width*/
+    width: 100%;
+    /*Necesito que este por encima de todo, entonces debo utilizas z-index: numero; el numero tiene que ser alto*/
+    z-index: 9999;
+    /*Para que el header vaya arriba*/
+    top: 0;
+    left: 0;
+    padding: 10px 16px 10px 16px;
+
+/*Modificamos esta parte con la clase 5 - flexbox*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*Me coloca ambos elementos en dos extremos*/
+    align-items: center; /*Alineo a todos los hijos del header*/
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.nav__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__item {
+    margin-left: 16px;
+}
+
+.header__icono{
+    color: blue;
+    font-size: 30px;
+    display: none;
+}
+
+/*--------------------------------------*/
+/*Main! Necesito que empiece dps del header y decirle al header dps que empiece desde top: 0; y left: 0;*/
+main {
+    margin-top: 200px;
+    min-height: 100vh; /*Esto sirve para que el footer quede abajo del todo!!*/
+}
+
+.footer {
+    background-color: violet;
+    color: white;
+    padding: 2rem 1rem; /*1rem = 16px*/
+    margin-top: 2rem;
+}
+
+.footer__texto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer__lista{
+    display: flex;
+    list-style: none;
+    /*Esto es pa alinear*/
+    flex-direction: row;
+    justify-content: center;
+    /**/
+    border-top: 3px solid white;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    gap: 2rem; /*separacion horizontal*/
+}
+
+/*--------------------------------------*/
+/*Enlaces!!*/
+a {
+    color: white;
+}
+
+.whatsapp{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+/*------------------------Clase 5------------------------*/
+/*Vemos flexbox! 
+Es lo que necesitamos para variar las vistas de pc a mobile o tablet*/
+
+body {
+    font-family: Pacifico;
+    background-color: aqua;
+    color: black;
+}
+
+.seccion {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.seccion__titulo {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/*flex esta en las listas*/
+.flex {
+    list-style: none; /*saca los estilos*/
+    border: 3px solid purple;
+    border-radius: 6px;
+    padding: 5px;
+    height: 400px; /*Si no pongo esto, queda con 1tamanio por defecto*/
+/*--------------------------------------*/
+    /*Propiedad display con el valor flex es obligatoria*/
+    display: flex; /*pa que funcione lo que haremos a continuacion (me pone todo en fila y superpuesto*/
+    /*--------------------------------------*/
+    /*direccion de los hijos*/
+    flex-direction: row; /*fila(x) o columna(y); row o column. Este es el eje principal*/
+    /*--------------------------------------*/
+    flex-wrap: wrap; /*"nowrap" valor por defecto para que todos los hijos queden en la misma linea
+    "wrap" valor para que los hijos no se queden todos amontonados y se muevan a la siguiente linea*/
+    /*--------------------------------------*/
+    /*Nos permite distribuir los elementos hijos en el eje principal. El eje principal depende de flex-direction*/
+    justify-content: space-between; /*valor por defecto -> "stretch"
+    "flex-start" -> para que los hijos se coloquen en el inicio del eje principal
+    "center" -> para centrar a los hijos
+    "space-around" , "space-between", "space-evenly"
+    */
+    /*--------------------------------------*/
+    /*Nos permite distribuir los elementos hijos en el eje secundario, depende de lo que coloque en flex-direction*/
+    align-items: center;
+    /*--------------------------------------*/
+    /*Propiedad acotada - Shorthand*/
+    flex-flow: row wrap; /*es lo mismo que hacer -> flex-direction flex wrap*/ 
+    /*--------------------------------------*/
+    /*Nos va a permitir mover los elementos generados si permitimos tener varias lineas (aplicando el valor wrap)*/
+    align-content: center;
+    /*"flex-start","flex-end","center"*/
+}
+
+.flex__hijo {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.flex__hijo--primero {
+    order: -1; /*El valor por defecto de todos los hijos es 0*/
+}
+
+.flex__hijo--ultimo {
+    order: 1;
+}
+
+
+/*------------------------Clase 6------------------------*/
+/*Grids*/
+
+.grid {
+    border: 3px solid rebeccapurple;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 1500px;
+    display: grid; /*Esto tiene que estar obligatoriamente*/
+
+    /*
+    - grid-template-columns: 40% 60%;valor1 valor2 valor3 ... valorn. Sirve para generar las columnas de la cuadricula
+    - grid-template-rows: 40% 20% 40%;valor1 valor2 valor3 ... valorn. Sirve para generar las filas de la cuadricula*/
+
+    /*tmbn podemos usar fracciones!
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;*/
+
+    grid-template-columns: repeat(3, 1fr); /*dos columnas de 2fr de tamanio*/
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "img1 img2 img2" 
+    "img3 img3 img4" 
+    "img5 img6 img4";
+/*---------------------*/
+    /*Espacios desde el padre para columas o filas
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;*/
+    
+    /* 
+    column-gap: 20px;
+    row-gap: 25px;
+    es lo mismo que lo anterior*/
+    
+    gap: 1rem;
+    /*tmbn puedo usar solo gap*/
+
+/*-----------opcional----------*/
+    justify-items: stretch; /*Ancho de los elementos. El valor por defecto -> "stretch"
+    tmbn puedo usar "center", "end", "start"*/
+
+    align-items: stretch; /*Altura de los elementos. El valor por defecto -> "stretch"
+    tmbn puedo usar "center", "end", "start"*/
+
+    /*Si sobra espacio debo usar estos comandoss*/
+    justify-content: center; /*columnas!!*/
+    align-content: center; /*filas!!*/
+}
+
+.grid__hijo {
+    border-radius: 10px;
+    overflow: hidden; /*Me oculta las esquinas rectangulares*/
+    position: relative;
+}
+
+.grid__hijo--1 {
+    grid-area: img1;
+    /* OPCIONAL
+    justify-self: start; solo muevo a este hijo
+    align-self: start;*/
+    background-color: salmon;
+}
+
+.grid__hijo--2 {
+    grid-area: img2;
+    background-color: green;
+}
+
+.grid__hijo--3 {
+    grid-area: img3;
+    background-color: blue;
+}
+
+.grid__hijo--4 {
+    grid-area: img4;
+    background-color: rgb(255, 102, 0);
+}
+
+.grid__hijo--5 {
+    grid-area: img5;
+    background-color: mediumorchid;
+}
+
+.grid__hijo--6 {
+    grid-area: img6;
+    background-color: rgb(173, 32, 67);
+}
+
+.grid__img, .grid__iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Para que la img se adecue a su lugar*/
+}
+
+.grid__texto {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+
+
+/*------------------------Clase 7------------------------*/
+/*Grids*/
+
+/*Medidas Querys
+    Para nosotres, las medidas querys tienen que quedar abajo del todo, asi que me voy para el fondo
+*/
+
+
+
+
+
+/*------------------------Clase 8------------------------*/
+/*Animaciones, transformaciones y transiciones*/
+
+
+/*------------------------Clase 9------------------------*/
+/*------------------------Clase 10------------------------*/
+/*------------------------Clase 11------------------------*/
+/*------------------------Clase 12------------------------*/
+/*------------------------Clase 13------------------------*/
+/*------------------------Clase 14------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------Clase 7------------------------*/
+
+
+
+/*Medidas Querys para clase 6 y 7*/
+
+/*Medida Tablet < 1023px*/
+@media screen and (max-width:1023px) {
+    .seccion__titulo{
+        text-align: left;
+    }
+
+    .grid {
+        display: none;
+    }
+}
+
+/*Movil*/
+@media screen and (max-width:599px) {
+    .seccion__titulo{
+        text-align: right;
+        color: gray;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,200px);
+        grid-template-areas: 
+        "img1" 
+        "img2" 
+        "img3" 
+        "img4" 
+        "img5" 
+        "img6";
+        align-content: stretch;
+        height: auto; /*de manera automatica*/
+    }
+}
+
+/*Medida Tablet < 1023px*/
+@media screen and (max-width:1023px) {
+    .seccion__titulo{
+        text-align: left;
+    }
+
+    .grid {
+        display: none;
+    }
+}
+
+
+/* --------------header--------------*/
+/*Movil*/
+@media screen and (max-width:599px) {
+
+    .nav {
+        display: none;
+    }
+    .header__icono {
+        display: block;
+    }
+
+}

@@ -1,0 +1,108 @@
+<!-- Objetivos de esta clase-->
+<!-- Flexbox -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!--Codificacion de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive-->
+    <title>Clase 5</title> <!-- Aca va el titulo de la web-->
+    <!-- En esta parte tmbn podemos poner links-->
+    <!-- Vinculacion de forma externa del CSS-->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Vinculacion de Google Fonts - Pacifico-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Vinculacion de ICONO -->
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+</head>
+<body>
+
+    <header> 
+        <!--el width y height hay que cambiarlo luego con CSS-->
+        <img class="logo" src="./img/logo.png" alt="LOGO" width="100" height="100">
+
+        <a href="">
+            <span class="jam jam-alien header__icono"></span>
+        </a>
+
+        <nav class="nav"> <!--Creamos una lista de paginas para el menu-->
+            <ul class="nav__lista">
+                <li class="nav__item">
+                    <a href="./clase-1.html">Clase 1</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-2.html">Clase 2</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./after-class-clase2y3.html">After Class - Clase 2 y 3</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-4.html">Clase 4</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-5.html">Clase 5</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-6-y-7.html">Clase 6 y 7</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-8.html">Clase 8</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./pages/otra-pagina.html">Otra Pagina</a>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <section class="seccion">
+            <h2 class="seccion__titulo">Entender Flexbox</h2>
+                <ul class="flex">
+                    <li class="flex__hijo">Item 1</li>
+                    <li class="flex__hijo">Item 2</li>
+                    <li class="flex__hijo flex__hijo--primero">Soy el primero</li>
+                    <li class="flex__hijo flex__hijo--ultimo">ahreee</li>
+                    <li class="flex__hijo">Item 5</li>
+                    <li class="flex__hijo">Item 6</li>
+                    <li class="flex__hijo">Item 7</li>
+                    <li class="flex__hijo">Item 1</li>
+                    <li class="flex__hijo">Item 2</li>
+                    <li class="flex__hijo">Item 3</li>
+                    <li class="flex__hijo">Item 4</li>
+                    <li class="flex__hijo">Item 5</li>
+                    <li class="flex__hijo">Item 6</li>
+                    <li class="flex__hijo">Item 7</li>
+                </ul>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Formulario de suscrpcion -->
+
+        <!-- Lista de enlaces de interes -->
+
+        <!-- Logo -->
+        <div class="footer__texto">
+            <img class="logo" src="./img/logo.png" alt="LOGO">
+            <p>Derechos reservados - Faustina Vidal</p>
+        </div>
+        <nav>
+            <ul class="footer__lista"> 
+                <li>
+                    <a href="" target="_blank">Instagram</a>
+                </li>
+                <li>
+                    <a href="" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="" target="_blank">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

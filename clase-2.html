@@ -1,0 +1,272 @@
+<!-- Objetivos de esta clase-->
+<!-- 
+Listas
+Formulario
+Enlaces
+Multimedia
+Tabla -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+    <!-- Vinculacion de forma externa del CSS-->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Vinculacion de Google Fonts - Pacifico-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Vinculacion de ICONO -->
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+</head>
+<body>
+
+    <header>
+        <!--el width y height hay que cambiarlo luego con CSS-->
+        <img class="logo" src="./img/logo.png" alt="LOGO" width="100" height="100">
+        <a href="">
+            <span class="jam jam-alien header__icono"></span>
+        </a>
+        <nav class="nav"> <!--Creamos una lista de paginas para el menu-->
+            <ul class="nav__lista">
+                <li class="nav__item">
+                    <a href="./clase-1.html">Clase 1</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-2.html">Clase 2</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./after-class-clase2y3.html">After Class - Clase 2 y 3</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-4.html">Clase 4</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-5.html">Clase 5</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-6-y-7.html">Clase 6 y 7</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./clase-8.html">Clase 8</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./pages/otra-pagina.html">Otra Pagina</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section><!--Listas-->
+            <!-- ol, ul, dl -> contenedores de items-->
+            <!-- li, dt-dd -> elementos de listas-->
+            <div> <!-- lista desordenada-->
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div> <!-- lista ordenada -->
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </div>
+            <div> <!-- lista de definicion (ejemplo, nombro y defino)-->
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Lenguaje de marcado de etiquetas para la web</dd>
+                    <dt>Faustina</dt>
+                    <dd>Es una chikilla que le gusta mucho la maruja</dd>
+                </dl>
+            </div>
+            <div><!-- Puedo hacer lista de enlaces-->
+                <ul> <!-- lista desordenada-->
+                    <li><!--enlace 1--></li>
+                    <li><!--enlace 2--></li>
+                    <li><!--enlace 3--></li>
+                </ul>
+            </div>
+            <div> <!-- Lista de imagenes-->
+                <ul> <!-- lista desordenada-->
+                    <li><!--imagen 1--></li>
+                    <li><!--imagen 2--></li>
+                    <li><!--imagen 3--></li>
+                </ul>
+            </div>
+        </section>
+<!-------------------------------------------->
+        <section><!--Formulario-->
+            <!-- Atributos del form -> action="" method="" enctype="" (seria <form action="" method="" enctype="">)
+            action-> Donde se van a enviar los datos que ingresemos en el formulario
+            method-> Como se van a enviar esos datos
+            enctype-> Como van a estar codificados los datos
+            -->
+            <form>
+                <div>
+                    <label for="">Nombre:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Email:</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label for="">Contraseña:</label>
+                    <input type="password">
+                </div>
+                <div> <!--con opciones, los input deben tener el mismo name-->
+                    <h2>Como estamos reyna?</h2>
+                    <label for="">Ahi vamo:</label>
+                    <input type="radio" name="estar" value="si">
+                    <label for="">Toy tiste:</label>
+                    <input type="radio" name="estar" value="no">
+                </div>
+                <div> <!--si quiero poner un tick-->
+                    <label for="">Acepta los terminos</label>
+                    <input type="checkbox" name="terminos" value="acepto">
+                </div>
+                <div> <!--Cajita de sugerencias-->
+                    <label for="">Comentario:</label>
+                    <textarea name="comentario" cols="30" rows="10"></textarea>
+                </div>
+                <!--------------------------->
+                <!-- Otras cosas que me pueden ser utiles: 
+                - Si yo quiero que cuando aprete la palabra nombre me lleve a la casilla de nombre, debo usar el atributo id. El atributo id se vincula con el atributo for
+                - El atributo name va a ser donde se guarden los valores, por ejemplo, atributo nombre=[silvia, julia, bla]
+                - El atributo placeholder sirve para que describa lo que hay que poner en esa casilla
+                - El atributo required es para que el campo sea obligatorio
+                -->
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Decime tu nombre hdp" required>
+                </div>
+                <div>
+                    <label for="talle">Talle</label>
+                    <select name="talle" id="talle" required>
+                        <option value="">Seleccione
+                        </option>
+                        <option value="S">S
+                        </option>
+                        <option value="M">M
+                        </option>
+                        <option value="L">L
+                        </option>
+                    </select>
+                </div>
+                <div> <!--boton de enviar-->
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </section>
+<!-------------------------------------------->
+        <section><!--Enlaces-->
+            <div> <!--Enlaces externos a mi pagina web-->
+            <!--El atributo target="_blank" sirve para que me abra el link en otra pestaña-->
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </div>
+            <div><!-- Enlaces internos de mi pagina web-->
+            <!-- Es importante que otra pagina tenga un enlace para poder volver a la pagina clase-2-->
+                <a href="./pages/otra-pagina.html">Otra pagina</a>
+            </div>
+        </section>
+<!-------------------------------------------->
+        <section><!--Multimedia-->
+        <!-- Imagenes, videos, audios, iframe-->
+        <div><!--Imagenes-->
+        <!--Los atributos width y height se borran cuando veamos CSS-->
+            <img src="./img/foto.jpg" alt="foto psicodelic" width="200" height="200">
+        </div>
+        <div><!--Videos-->
+            <!--no tengo video-->
+            <video src="" width="200" height="200" controls></video> 
+        </div>
+        <div><!--Audios-->
+            <audio src="" controls></audio>
+        </div>
+        <div><!--Iframe-->
+        <!--Esta wea sirve para poner otra web dentro de nuestra web, por ejemplo, pongamos la web de la clase 1 en la clase 2.
+        Sirve tmbn para traer videos, canciones, ubicaciones de otra web-->
+            <iframe src="./clase-1.html" frameborder="0"></iframe>
+        </div>
+        <div><!--Iframe de mapa-->
+        <!--Menu-> Compartir o incorporar mapa-> Incorporar mapa-> Copiar HTML -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26184.66167467553!2d-56.0974031874643!3d-34.87926933678948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f86e5586fd3e1%3A0xbaa8aff375c84e7c!2sPortones%20Shopping!5e0!3m2!1ses-419!2suy!4v1658020560612!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div><!--Iframe de youtube-->
+        <!--Compartir-> Insertar-> copiar iframe, puedo cambiar el tamaño con el width y height-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b6dMJfSUqV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </section>
+<!-------------------------------------------->
+        <section><!--Tabla-->
+            <!--
+            tr -> fila
+            td, th -> celda o columna de una fila
+            -->
+            <table border="1">
+                <tr>
+                    <th>libro</th>
+                    <th>precio</th>
+                </tr>
+                <tr>
+                    <td>harry potter</td>
+                    <td>$5</td>
+                </tr>
+            </table>
+        </section>
+<!-------------------------------------------->
+<!--Esto es lo que hizo el profe en su pagina web-->
+        <section>
+            <div>
+                <h1>Este es nuestro titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, saepe alias incidunt delectus voluptate dignissimos soluta mollitia porro voluptas quidem quos? Dolorem quisquam explicabo, dicta non ex dolores quae praesentium!</p>
+                <a href="">
+                    <!--Imagen de wtsap o icono-->
+                </a>
+            </div>
+
+            <div>
+                <img src="./img/foto2.jpg" alt="Alien" width="200" height="200">
+            </div>
+<!--Agrupar las cosas en un div distinto, hacen que cambien al siguiente parrafo!!-->
+            <div>
+                <img src="./img/foto3.jpg" alt="foto" width="50" height="50">
+                <img src="./img/foto4.jpg" alt="foto" width="50" height="50">
+                <img src="./img/foto5.png" alt="foto" width="50" height="50">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <!-- Formulario de suscrpcion -->
+
+        <!-- Lista de enlaces de interes -->
+
+        <!-- Logo -->
+        <div class="footer__texto">
+            <img class="logo" src="./img/logo.png" alt="LOGO">
+            <p>Derechos reservados - Faustina Vidal</p>
+        </div>
+        <nav>
+            <ul class="footer__lista"> 
+                <li>
+                    <a href="" target="_blank">Instagram</a>
+                </li>
+                <li>
+                    <a href="" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="" target="_blank">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
